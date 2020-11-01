@@ -4,7 +4,7 @@ https://github.com/yasuomatsuoka/dotfiles にある dotfiles も ansible でセ�
 $ xcode-select --install
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install ansible
-$ git@github.com:yasuomatsuoka/mac_setup.git
+$ git clone git@github.com:yasuomatsuoka/mac_setup.git
 $ cd mac_setup
 $ ansible-playbook site.yml -i hosts --ask-become-pass 
 ```
