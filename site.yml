@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: no
+  connection: local
+  gather_facts: yes
+
+  roles:
+    - homebrew
+    - homebrew_cask
+    - dotfile
+    - macos
+    - mas
+    - fonts

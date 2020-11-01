@@ -1,0 +1,36 @@
+---
+- block:
+    - block:
+        # osx defaults
+        - name: set osx defaults
+          osx_defaults:
+            domain: "{{ item.domain }}"
+            key: "{{ item.key }}"
+            type: "{{ item.type }}"
+            value: "{{ item.value }}"
+          with_items: "{{ settings }}"
+      tags:
+        - osx_defaults
+
+    - block:
+        # fishシェルに変更
+        - name: edit /etc/shells
+          lineinfile:
+            dest: /etc/shells
+            line: "{{ fish_bin }}"
+          become: yes
+
+        - name: chsh
+          command: "chsh -s {{ fish_bin }}"
+
+        # fisher のインストール
+        - name: install fisher
+          shell: "curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish"
+
+        - name: install fish plugin by fisher
+          shell: fish -c "fisher add {{ item }}"
+          with_items: "{{ fish_plugins }}"
+      tags:
+        - fish
+  tags:
+    - macos

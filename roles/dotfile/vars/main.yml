@@ -1,0 +1,5 @@
+---
+dotfiles:
+  repository: git@github.com:yasuomatsuoka/dotfiles.git
+  dest: ~/src/github.com/yasuomatsuoka/dotfiles
+  symlink_command: "cd ~/src/github.com/yasuomatsuoka/dotfiles ; sh symlink_and_copy.sh"

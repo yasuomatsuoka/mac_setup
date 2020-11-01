@@ -1,0 +1,18 @@
+---
+settings:
+  - {
+      domain: NSGlobalDomain,
+      key: AppleShowAllExtensions,
+      type: bool,
+      value: TRUE,
+    }
+  - { domain: com.apple.dock, key: no-bouncing, type: bool, value: TRUE }
+
+fish_bin: "/usr/local/bin/fish"
+
+fish_plugins:
+  - oh-my-fish/theme-clearance
+  - jethrokuan/fzf
+  - jethrokuan/z
+  - decors/fish-ghq
+  - 0rax/fish-bd

@@ -1,0 +1,12 @@
+---
+packages:
+  - { name: alfred, state: present }
+  - { name: vivaldi, state: present }
+  - { name: visual-studio-code, state: present }
+  - { name: docker, state: present }
+  - { name: google-japanese-ime, state: present }
+  - { name: font-ricty-diminished, state: present }
+  - { name: authy, state: present }
+  - { name: bettertouchtool, state: present }
+  - { name: zoom, state: present }
+  - { name: xquartz, state: present }

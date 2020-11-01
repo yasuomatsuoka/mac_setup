@@ -1,0 +1,12 @@
+---
+# file: ./mas/vars/main.yml
+
+packages:
+  - { id: 568020055, name: Scapple }
+  - { id: 497799835, name: Xcode }
+  - { id: 539883307, name: LINE }
+  - { id: 975937182, name: Fantastical }
+  - { id: 1176895641, name: Spark }
+  - { id: 803453959, name: Slack }
+  - { id: 425955336, name: Skitch }
+  - { id: 926036361, name: LastPass }
