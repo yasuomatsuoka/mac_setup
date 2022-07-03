@@ -53,9 +53,15 @@ done
 
 - .zshrcの必要な設定を入れる (https://github.com/yasuomatsuoka/dotfiles/blob/master/.zshrc)
 - 好みにPreztoをカスタマイズ
-  - `'autosuggestions'` の拡張は絶対に入れておきたい
+  - autosuggestions の拡張は絶対に入れておきたい
 
 ## 4. terminal再起動
 
 ## メモ
-- ricty を入れていないので入れる
+### rictyをansibl化できていないので対応する
+### 個別実行方法
+```bash
+ansible-playbook -i hosts site.yml --tags macos
+ansible-playbook -i hosts site.yml --tags mas
+ansible-playbook -i hosts site.yml --tags homebrew_cask
+```
