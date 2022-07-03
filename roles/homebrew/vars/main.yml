@@ -2,19 +2,14 @@
 taps:
   - homebrew/cask
   - homebrew/core
-  - homebrew/cask-fonts
+  - homebrew/cask-versions
 
 packages:
-  - { name: ansible, state: present }
   - { name: nkf, state: present }
-  - { name: python, state: present }
   - { name: tig, state: present }
   - { name: tmux, state: present }
   - { name: tree, state: present }
   - { name: wget, state: present }
-  - { name: fish, state: present }
-  - { name: mas, state: present } # mas-cli
+  - { name: mas, state: present }
   - { name: fzf, state: present }
   - { name: ghq, state: present }
-  - { name: fontconfig, state: present } # for fc-cache
-  - { name: ricty, state: present } # for fc-cache

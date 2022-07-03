@@ -3,10 +3,10 @@
     - name: homebrew cask install
       homebrew_cask:
         name: "{{ item.name }}"
-        state: "{{ item.state }}"
-        install_options: "appdir=/Applications"
+        state: "{{ item.state  | default('installed')}}"
+        install_options: "appdir=~/Applications"
       register: result
-      ignore_errors: true # インストール済みだった場合止まるのでスルー
+      ignore_errors: yes # インストール済みだった場合止まるのでスルー
       with_items: "{{ packages }}"
 
   tags:

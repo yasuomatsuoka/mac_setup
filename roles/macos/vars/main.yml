@@ -6,13 +6,21 @@ settings:
       type: bool,
       value: TRUE,
     }
-  - { domain: com.apple.dock, key: no-bouncing, type: bool, value: TRUE }
-
-fish_bin: "/usr/local/bin/fish"
-
-fish_plugins:
-  - oh-my-fish/theme-clearance
-  - jethrokuan/fzf
-  - jethrokuan/z
-  - decors/fish-ghq
-  - 0rax/fish-bd
+  - {
+      domain: com.apple.dock,
+      key: no-bouncing,
+      type: bool,
+      value: TRUE
+    }
+  - {
+      domain: ,
+      key: InitialKeyRepeat,
+      type: int,
+      value: 10
+    }
+  - {
+      domain: ,
+      key: KeyRepeat,
+      type: int,
+      value: 1
+    }

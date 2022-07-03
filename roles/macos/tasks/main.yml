@@ -13,24 +13,19 @@
         - osx_defaults
 
     - block:
-        # fishシェルに変更
-        - name: edit /etc/shells
-          lineinfile:
-            dest: /etc/shells
-            line: "{{ fish_bin }}"
-          become: yes
+        # clone Prezto zsh plugin
+        - name: remove zshsetting
+          shell: |
+             rm ~/.zlogin
+             rm ~/.zlogout
+             rm ~/.zpreztorc
+             rm ~/.zprofile
+             rm ~/.zshenv
+             rm ~/.zshrc
 
-        - name: chsh
-          command: "chsh -s {{ fish_bin }}"
-
-        # fisher のインストール
-        - name: install fisher
-          shell: "curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish"
-
-        - name: install fish plugin by fisher
-          shell: fish -c "fisher add {{ item }}"
-          with_items: "{{ fish_plugins }}"
+        - name: install prezto
+          shell: 'git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"'
       tags:
-        - fish
+        - zsh
   tags:
     - macos

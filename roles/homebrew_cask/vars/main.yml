@@ -1,12 +1,19 @@
 ---
 packages:
+  - { name: google-chrome, state: present }
+  - { name: google-chrome-canary, state: present }
+  - { name: google-japanese-ime, state: present }
   - { name: alfred, state: present }
-  - { name: vivaldi, state: present }
   - { name: visual-studio-code, state: present }
   - { name: docker, state: present }
-  - { name: google-japanese-ime, state: present }
-  - { name: font-ricty-diminished, state: present }
   - { name: authy, state: present }
   - { name: bettertouchtool, state: present }
   - { name: zoom, state: present }
-  - { name: xquartz, state: present }
+  - { name: obsidian, state: present }
+  - { name: tomatobar, state: present }
+  - { name: notion, state: present }
+  - { name: slack, state: present }
+  - { name: skitch, state: present }
+  - { name: dropbox, state: present }
+  - { name: vlc, state: present }
+  - { name: sequel-ace, state: present }
