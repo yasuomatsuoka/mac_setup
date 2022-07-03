@@ -13,7 +13,7 @@ $ ./scripts/inital.sh
 ```
 
 
-### ｚｓｈ の設定 (ansibleでうまく設定できなかった)
+### zshの設定 (ansibleでうまく設定できなかった)
 
 ```bash
 $ tail /etc/shells                                   
