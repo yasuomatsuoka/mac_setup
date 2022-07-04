@@ -7,8 +7,17 @@ git clone git@github.com:yasuomatsuoka/mac_setup
 ## 1. 初回シェル実行とzsh初期設定
 homebrew は `~/.homebrew` にインストールする。
 
+### zshrc に homebrew の　path を設定
+```
+$ cat ~/.zshrc
+# homebrew
+export PATH=$HOME/.homebrew/bin:$PATH
+export HOMEBREW_CACHE=$HOME/.homebrew/caches
+```
+
 ### 初回シェル実行
 ```bash
+$ u+x ./scripts/inital.sh
 $ ./scripts/inital.sh
 ```
 
