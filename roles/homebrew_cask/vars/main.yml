@@ -17,3 +17,4 @@ packages:
   - { name: dropbox, state: present }
   - { name: vlc, state: present }
   - { name: sequel-ace, state: present }
+  - { name: bitwarden, state: present }
