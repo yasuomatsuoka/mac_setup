@@ -18,3 +18,4 @@ packages:
   - { name: vlc, state: present }
   - { name: sequel-ace, state: present }
   - { name: bitwarden, state: present }
+  - { name: spotify, state: present }
