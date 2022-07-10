@@ -20,7 +20,7 @@ export HOMEBREW_CACHE=$HOME/.homebrew/caches
 ```
 
 ### 初回シェル実行
-
+xcode homebrew zsh ansible をインストール
 ```bash
 $ u+x ./scripts/inital.sh
 $ ./scripts/inital.sh
@@ -49,7 +49,7 @@ $ chsh -s /Users/yasuo/.homebrew/bin/zsh
 ## 2.ansible 実行
 
 パスワードが必要なタイミングで聞かれるように実行する。
-ｚｓｈ関連の設定ファイルは Prezto のインストールのため削除するので注意。
+zsh関連の設定ファイルは Prezto のインストールのため削除するので注意。
 brew cask のインストール先は `~/Applications` 以下に作成する。
 
 ```
@@ -69,9 +69,10 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 ```
 
-- .zshrc の必要な設定を入れる (https://github.com/yasuomatsuoka/dotfiles/blob/master/.zshrc)
+- .zshrc の必要な設定を入れる (https://github.com/yasuomatsuoka/mac_setup/blob/master/dotfiles/zshrc)
 - 好みに Prezto をカスタマイズ
   - autosuggestions の拡張は絶対に入れておきたい
+  - テーマは pure
 
 ## 4. terminal 再起動
 
@@ -84,5 +85,6 @@ done
 ```bash
 ansible-playbook -i hosts site.yml --tags osx_defaults
 ansible-playbook -i hosts site.yml --tags mas
+ansible-playbook -i hosts site.yml --tags homebrew
 ansible-playbook -i hosts site.yml --tags homebrew_cask
 ```
