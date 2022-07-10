@@ -7,7 +7,5 @@
   roles:
     - homebrew
     - homebrew_cask
-    - dotfile
-    - macos
     - mas
-    - fonts
+    - macos

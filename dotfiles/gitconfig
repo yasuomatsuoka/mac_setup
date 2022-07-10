@@ -18,5 +18,5 @@
 #  path = ~/.gitconfig-office
 
 # 個人用アカウントを使用する
-[includeIf "gitdir:~/src/github.com/yasuomatsuoka/"]
+[includeIf "gitdir:~/mac_setup/"]
   path = ~/.gitconfig-private
