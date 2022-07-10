@@ -1,13 +1,17 @@
 # 使い方
+
 ## 0. 手元に持ってくる
+
 ```bash
 git clone git@github.com:yasuomatsuoka/mac_setup
 ```
 
-## 1. 初回シェル実行とzsh初期設定
+## 1. 初回シェル実行と zsh 初期設定
+
 homebrew は `~/.homebrew` にインストールする。
 
-### zshrc に homebrew の　path を設定
+### zshrc に homebrew の path を設定
+
 ```
 $ cat ~/.zshrc
 # homebrew
@@ -16,16 +20,16 @@ export HOMEBREW_CACHE=$HOME/.homebrew/caches
 ```
 
 ### 初回シェル実行
+
 ```bash
 $ u+x ./scripts/inital.sh
 $ ./scripts/inital.sh
 ```
 
-
-### zshの設定 (ansibleでうまく設定できなかった)
+### zsh の設定 (ansible でうまく設定できなかった)
 
 ```bash
-$ tail /etc/shells                                   
+$ tail /etc/shells
 # one of these shells.
 
 /bin/bash
@@ -42,17 +46,22 @@ $ chsh -s /Users/yasuo/.homebrew/bin/zsh
 
 ### ターミナルの再起動
 
-## 2.ansible実行
+## 2.ansible 実行
+
 パスワードが必要なタイミングで聞かれるように実行する。
-ｚｓｈ関連の設定ファイルはPreztoのインストールのため削除するので注意。
+ｚｓｈ関連の設定ファイルは Prezto のインストールのため削除するので注意。
 brew cask のインストール先は `~/Applications` 以下に作成する。
+
 ```
-$ ansible-playbook site.yml -i hosts --ask-become-pass 
+$ ansible-playbook site.yml -i hosts --ask-become-pass
 ```
 
 ## 3. zsh Prezto の設定
-Preztoの設定をansible化できていないので手動で下記を行う
-- .zsh系を Prezto でつくる
+
+Prezto の設定を ansible 化できていないので手動で下記を行う
+
+- .zsh 系を Prezto でつくる
+
 ```bash
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
@@ -60,17 +69,20 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 ```
 
-- .zshrcの必要な設定を入れる (https://github.com/yasuomatsuoka/dotfiles/blob/master/.zshrc)
-- 好みにPreztoをカスタマイズ
+- .zshrc の必要な設定を入れる (https://github.com/yasuomatsuoka/dotfiles/blob/master/.zshrc)
+- 好みに Prezto をカスタマイズ
   - autosuggestions の拡張は絶対に入れておきたい
 
-## 4. terminal再起動
+## 4. terminal 再起動
 
 ## メモ
-### rictyをansibl化できていないので対応する
+
+### ricty を ansibl 化できていないので対応する
+
 ### 個別実行方法
+
 ```bash
-ansible-playbook -i hosts site.yml --tags macos
+ansible-playbook -i hosts site.yml --tags osx_defaults
 ansible-playbook -i hosts site.yml --tags mas
 ansible-playbook -i hosts site.yml --tags homebrew_cask
 ```

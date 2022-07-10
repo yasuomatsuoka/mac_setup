@@ -1,26 +1,167 @@
 ---
 settings:
+  # key
   - {
+      # キーリピートの速度
+      domain: NSGlobalDomain,
+      key: KeyRepeat,
+      type: int,
+      value: 2,
+    }
+  - {
+      # キーリピート開始までのタイミング
+      domain: NSGlobalDomain,
+      key: InitialKeyRepeat,
+      type: int,
+      value: 10,
+    }
+  - {
+      # 自動大文字の無効化
+      domain: NSGlobalDomain,
+      key: NSAutomaticCapitalizationEnabled,
+      type: bool,
+      value: false,
+    }
+  - {
+      # ペルの訂正を無効にする
+      domain: NSGlobalDomain,
+      key: NSAutomaticSpellingCorrectionEnabled,
+      type: bool,
+      value: false,
+    }
+  # dock
+  - {
+      # Dock を自動的に隠す
+      domain: com.apple.dock,
+      key: autohide,
+      type: bool,
+      value: true,
+    }
+  - {
+      # Dock の拡大機能を入にする
+      domain: com.apple.dock,
+      key: magnification,
+      type: bool,
+      value: true,
+    }
+  # finder
+  - {
+      # パスバーを表示する
+      domain: com.apple.finder,
+      key: ShowPathbar,
+      type: bool,
+      value: true,
+    }
+  - {
+      # ステータスバーを表示する
+      domain: com.apple.finder,
+      key: ShowStatusBar,
+      type: bool,
+      value: true,
+    }
+  - {
+      # ゴミ箱を空にする前の警告を無効化する
+      domain: com.apple.finder,
+      key: WarnOnEmptyTrash,
+      type: bool,
+      value: true,
+    }
+  - {
+      # 全ての拡張子のファイルを表示する
       domain: NSGlobalDomain,
       key: AppleShowAllExtensions,
       type: bool,
-      value: TRUE,
+      value: true,
     }
   - {
-      domain: com.apple.dock,
-      key: no-bouncing,
+      # スクロールバーを常時表示する
+      domain: NSGlobalDomain,
+      key: AppleShowScrollBars,
+      type: string,
+      value: Always,
+    }
+  - {
+      # スクリーンキャプチャの影をなくす
+      domain: com.apple.screencapture,
+      key: disable-shadow,
       type: bool,
-      value: TRUE
+      value: true,
     }
   - {
-      domain: ,
-      key: InitialKeyRepeat,
-      type: int,
-      value: 10
+      # スクリーンショットの保存形式を PNG にする
+      domain: com.apple.screencapture,
+      key: type,
+      type: string,
+      value: png,
     }
   - {
-      domain: ,
-      key: KeyRepeat,
-      type: int,
-      value: 1
+      # QuickLook で文字の選択、コピーを出来るようにする
+      domain: com.apple.finder,
+      key: QLEnableTextSelection,
+      type: bool,
+      value: true,
+    }
+  - {
+      # 名前で並べ替えを選択時にディレクトリを前に置くようにする
+      domain: com.apple.finder,
+      key: FXDefaultSearchScop,
+      type: string,
+      value: SCcf,
+    }
+  - {
+      # ディレクトリのスプリングロードを有効化
+      domain: NSGlobalDomain,
+      key: com.apple.springing.enabled,
+      type: bool,
+      value: true,
+    }
+  - {
+      # スプリングロード遅延を除去
+      domain: NSGlobalDomain,
+      key: com.apple.springing.delay,
+      type: float,
+      value: 0,
+    }
+  - {
+      # ダウンロードしたファイルを初めて開く際に表示される警告ダイアログを無効
+      domain: com.apple.LaunchServices,
+      key: LSQuarantine,
+      type: bool,
+      value: false,
+    }
+  # other
+  - {
+      # ターミナル終了時のプロンプトを非表示にする
+      domain: com.googlecode.iterm2,
+      key: PromptOnQuit,
+      type: bool,
+      value: false,
+    }
+  - {
+      # ターミナルのベルを停止
+      domain: com.apple.terminal,
+      key: Bell,
+      type: bool,
+      value: false,
+    }
+  - {
+      # ターミナルヴィジュアルベルを停止
+      domain: com.apple.terminal,
+      key: VisualBell,
+      type: bool,
+      value: false,
+    }
+  - {
+      # Viscose で長押しで移動1
+      domain: com.microsoft.VSCode,
+      key: ApplePressAndHoldEnabled,
+      type: bool,
+      value: false,
+    }
+  - {
+      # Viscose で長押しで移動2
+      domain: com.microsoft.VSCodeInsiders,
+      key: ApplePressAndHoldEnabled,
+      type: bool,
+      value: false,
     }

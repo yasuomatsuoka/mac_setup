@@ -1,6 +1,10 @@
 ---
+taps:
+  - homebrew/cask
+  - homebrew/core
+  - homebrew/cask-versions
+
 packages:
-  - { name: google-chrome, state: present }
   - { name: google-chrome-canary, state: present }
   - { name: google-japanese-ime, state: present }
   - { name: alfred, state: present }
@@ -18,4 +22,3 @@ packages:
   - { name: vlc, state: present }
   - { name: sequel-ace, state: present }
   - { name: bitwarden, state: present }
-  - { name: spotify, state: present }

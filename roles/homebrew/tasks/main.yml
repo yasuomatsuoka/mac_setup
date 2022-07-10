@@ -5,12 +5,6 @@
       homebrew:
         update_homebrew: true
         upgrade_all: no
-    # brew tap
-    - name: homebrew tap
-      homebrew_tap:
-        name: "{{ item }}"
-        state: present
-      with_items: "{{ taps }}"
     # brew instal
     - name: install homebrew packages
       homebrew:

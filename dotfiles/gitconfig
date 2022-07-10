@@ -1,0 +1,22 @@
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[pull]
+    rebase = false
+    ff = only
+[color]
+    ui = auto
+[alias]
+    st = status
+    cm = commit
+    difff = diff --word-diff
+[ghq]
+    root = ~/src
+
+# 会社のgitconfig設定を使う
+# [includeIf "gitdir:特定のディレクトリ"]
+#  path = ~/.gitconfig-office
+
+# 個人用アカウントを使用する
+[includeIf "gitdir:~/src/github.com/yasuomatsuoka/"]
+  path = ~/.gitconfig-private

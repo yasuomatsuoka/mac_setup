@@ -1,5 +1,18 @@
 ---
 - block:
+    # brew update
+    - name: homebrew update/upgrade
+      homebrew:
+        update_homebrew: true
+        upgrade_all: no
+
+    # brew tap
+    - name: homebrew tap
+      homebrew_tap:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ taps }}"
+
     - name: homebrew cask install
       homebrew_cask:
         name: "{{ item.name }}"

@@ -1,9 +1,4 @@
 ---
-taps:
-  - homebrew/cask
-  - homebrew/core
-  - homebrew/cask-versions
-
 packages:
   - { name: nkf, state: present }
   - { name: tig, state: present }
@@ -12,4 +7,4 @@ packages:
   - { name: wget, state: present }
   - { name: mas, state: present }
   - { name: fzf, state: present }
-  - { name: ghq, state: present }
+  - { name: git, state: present }
