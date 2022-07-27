@@ -89,7 +89,7 @@ ansible-playbook -i hosts site.yml --tags homebrew
 ansible-playbook -i hosts site.yml --tags homebrew_cask
 ```
 
-### 4kより解像度が低いディスプレイを使うよう
+### 4kより解像度が低いディスプレイを使う時用
 ```
 # フォントスムージング処理にカラーフリンジを使用しないをオフにする
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
