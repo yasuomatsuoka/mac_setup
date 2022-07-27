@@ -88,3 +88,12 @@ ansible-playbook -i hosts site.yml --tags mas
 ansible-playbook -i hosts site.yml --tags homebrew
 ansible-playbook -i hosts site.yml --tags homebrew_cask
 ```
+
+### 4kより解像度が低いディスプレイを使うよう
+```
+# フォントスムージング処理にカラーフリンジを使用しないをオフにする
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
+# アンチエイリアシングの強度を調整 0-3
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+```
