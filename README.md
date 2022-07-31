@@ -81,9 +81,6 @@ done
 http://cocopon.github.io/iceberg.vim/ から zip をダウンロードして `.termial` の拡張子をダブルクリックで反映される
 
 ## メモ
-
-### ricty を ansibl 化できていないので対応する
-
 ### 個別実行方法
 
 ```bash
@@ -91,7 +88,8 @@ ansible-playbook -i hosts site.yml --tags osx_defaults
 ansible-playbook -i hosts site.yml --tags mas
 ansible-playbook -i hosts site.yml --tags homebrew
 ansible-playbook -i hosts site.yml --tags homebrew_cask
-```　
+ansible-playbook -i hosts site.yml --tags ricty
+```
 
 ### 4kより解像度が低いディスプレイを使う時用
 ```
