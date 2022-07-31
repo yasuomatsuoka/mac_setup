@@ -8,3 +8,4 @@ packages:
   - { name: mas, state: present }
   - { name: fzf, state: present }
   - { name: git, state: present }
+  - { name: fontforge, state: present }

@@ -3,6 +3,7 @@ taps:
   - homebrew/cask
   - homebrew/core
   - homebrew/cask-versions
+  - homebrew/cask-fonts
 
 packages:
   - { name: google-chrome-canary, state: present }
@@ -22,3 +23,5 @@ packages:
   - { name: vlc, state: present }
   - { name: sequel-ace, state: present }
   - { name: bitwarden, state: present }
+  - { name: font-ricty-diminished, state: present }
+  - { name: fontforge, state: present }
