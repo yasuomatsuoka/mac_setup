@@ -75,6 +75,10 @@ done
   - テーマは pure
 
 ## 4. terminal 再起動
+再起動する
+
+## 5. terminal に Iceberg Coloer Scheme を設定
+http://cocopon.github.io/iceberg.vim/ から zip をダウンロードして `.termial` の拡張子をダブルクリックで反映される
 
 ## メモ
 
@@ -87,7 +91,7 @@ ansible-playbook -i hosts site.yml --tags osx_defaults
 ansible-playbook -i hosts site.yml --tags mas
 ansible-playbook -i hosts site.yml --tags homebrew
 ansible-playbook -i hosts site.yml --tags homebrew_cask
-```
+```　
 
 ### 4kより解像度が低いディスプレイを使う時用
 ```
@@ -96,4 +100,6 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 # アンチエイリアシングの強度を調整 0-3
 defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+
+# logoutする
 ```
