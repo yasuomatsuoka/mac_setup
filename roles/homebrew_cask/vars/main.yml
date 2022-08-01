@@ -24,4 +24,3 @@ packages:
   - { name: sequel-ace, state: present }
   - { name: bitwarden, state: present }
   - { name: font-ricty-diminished, state: present }
-  - { name: fontforge, state: present }
