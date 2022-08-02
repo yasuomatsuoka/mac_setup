@@ -16,6 +16,13 @@ settings:
       value: 10,
     }
   - {
+      # US モードでキーリピートする
+      domain: NSGlobalDomain,
+      key: ApplePressAndHoldEnabled,
+      type: bool,
+      value: false,
+    }
+  - {
       # 自動大文字の無効化
       domain: NSGlobalDomain,
       key: NSAutomaticCapitalizationEnabled,
@@ -23,7 +30,7 @@ settings:
       value: false,
     }
   - {
-      # ペルの訂正を無効にする
+      # スペルの訂正を無効にする
       domain: NSGlobalDomain,
       key: NSAutomaticSpellingCorrectionEnabled,
       type: bool,
