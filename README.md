@@ -10,13 +10,14 @@ git clone git@github.com:yasuomatsuoka/mac_setup
 
 homebrew は `~/.homebrew` にインストールする。
 
-### zshrc に homebrew の path を設定
+### .zshrc に設定読み込み
+zsh Prezto を使うので直接設定しない
 
 ```
 $ cat ~/.zshrc
-# homebrew
-export PATH=$HOME/.homebrew/bin:$PATH
-export HOMEBREW_CACHE=$HOME/.homebrew/caches
+if [ -e ~/mac_setup//dotfiles/zshrc ]; then
+    source ~/mac_setup//dotfiles/zshrc
+fi
 ```
 
 ### 初回シェル実行
