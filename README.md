@@ -78,8 +78,8 @@ done
 ## 4. terminal 再起動
 再起動する
 
-## 5. terminal に Iceberg Coloer Scheme を設定
-http://cocopon.github.io/iceberg.vim/ から zip をダウンロードして `.termial` の拡張子をダブルクリックで反映される
+## 5. terminal に ayu Coloer Scheme を設定
+https://github.com/hwyncho/ayu-Terminal-app から zip をダウンロードして `.termial` の拡張子をダブルクリックで反映される
 
 ## メモ
 ### 個別実行方法
