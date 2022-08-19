@@ -3,4 +3,13 @@
 export PATH=$HOME/.homebrew/bin:$PATH
 export HOMEBREW_CACHE=$HOME/.homebrew/caches
 
+# alias
 alias docker-login='(){ docker exec -it $1 bash -lc "su - $2" }'
+
+# fzf
+function select-history() {
+  BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  CURSOR=$#BUFFER
+}
+zle -N select-history
+bindkey '^r' select-history
