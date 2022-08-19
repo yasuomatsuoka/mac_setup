@@ -1,4 +1,6 @@
-# Prezto で.zshrcを作成してからコピペする
+# .zshrc から読込む
 # homebrew
 export PATH=$HOME/.homebrew/bin:$PATH
 export HOMEBREW_CACHE=$HOME/.homebrew/caches
+
+alias docker-login='(){ docker exec -it $1 bash -lc "su - $2" }'
