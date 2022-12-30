@@ -9,3 +9,4 @@ packages:
   - { name: fzf, state: present }
   - { name: git, state: present }
   - { name: fontforge, state: present }
+  - { name: volta, state: present }
