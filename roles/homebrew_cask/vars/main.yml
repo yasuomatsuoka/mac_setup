@@ -24,3 +24,5 @@ packages:
   - { name: sequel-ace, state: present }
   - { name: bitwarden, state: present }
   - { name: font-ricty-diminished, state: present }
+  - { name: logseq, state: present }
+  - { name: appcleaner, state: present }
