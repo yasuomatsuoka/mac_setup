@@ -11,7 +11,6 @@ packages:
   - { name: alfred, state: present }
   - { name: visual-studio-code, state: present }
   - { name: docker, state: present }
-  - { name: authy, state: present }
   - { name: bettertouchtool, state: present }
   - { name: zoom, state: present }
   - { name: obsidian, state: present }
@@ -26,3 +25,4 @@ packages:
   - { name: font-ricty-diminished, state: present }
   - { name: logseq, state: present }
   - { name: appcleaner, state: present }
+  - { name: hyperswitch, state: present }
