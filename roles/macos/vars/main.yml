@@ -127,7 +127,7 @@ settings:
       domain: NSGlobalDomain,
       key: com.apple.springing.delay,
       type: float,
-      value: 0,
+      value: 0.1,
     }
   - {
       # ダウンロードしたファイルを初めて開く際に表示される警告ダイアログを無効

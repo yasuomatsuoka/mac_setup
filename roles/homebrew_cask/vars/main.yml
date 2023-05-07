@@ -12,7 +12,7 @@ packages:
   - { name: visual-studio-code, state: present }
   - { name: docker, state: present }
   - { name: bettertouchtool, state: present }
-  - { name: zoom, state: present }
+#  - { name: zoom, state: present }
   - { name: obsidian, state: present }
   - { name: tomatobar, state: present }
   - { name: notion, state: present }
@@ -20,9 +20,9 @@ packages:
   - { name: skitch, state: present }
   - { name: dropbox, state: present }
   - { name: vlc, state: present }
-  - { name: sequel-ace, state: present }
+#  - { name: sequel-ace, state: present }
   - { name: bitwarden, state: present }
   - { name: font-ricty-diminished, state: present }
-  - { name: logseq, state: present }
   - { name: appcleaner, state: present }
   - { name: hyperswitch, state: present }
+  - { name: figma, state: present }
