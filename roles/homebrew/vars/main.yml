@@ -10,3 +10,6 @@ packages:
   - { name: git, state: present }
   - { name: fontforge, state: present }
   - { name: volta, state: present }
+  - { name: ghq, state: present }
+  - { name: peco, state: present }
+  - { name: nodenv, state: present }
