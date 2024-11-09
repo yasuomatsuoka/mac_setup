@@ -13,19 +13,6 @@
         - osx_defaults
 
     - block:
-        # Ricty
-        - name: fix Ricty Font for VSCode
-          shell: |
-            brew link fontforge
-            chmod a+x ./scripts/fix_ricty.pe
-            ./scripts/fix_ricty.pe ~/Library/Fonts/RictyDiminished-Bold.ttf
-            ./scripts/fix_ricty.pe ~/Library/Fonts/RictyDiminished-Regular.ttf
-            ./scripts/fix_ricty.pe ~/Library/Fonts/RictyDiminishedDiscord-Bold.ttf
-            ./scripts/fix_ricty.pe ~/Library/Fonts/RictyDiminished-Regular.ttf
-      tags:
-        - ricty
-
-    - block:
         # clone Prezto zsh plugin
         - name: remove zshsetting
           shell: |

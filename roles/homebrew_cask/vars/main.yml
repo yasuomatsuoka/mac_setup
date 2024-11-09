@@ -3,25 +3,18 @@ taps:
   - homebrew/cask
   - homebrew/core
   - homebrew/cask-versions
-  - homebrew/cask-fonts
 
 packages:
-  - { name: google-chrome-canary, state: present }
+  - { name: font-hackgen, state: present }
   - { name: google-japanese-ime, state: present }
   - { name: alfred, state: present }
   - { name: visual-studio-code, state: present }
-  - { name: docker, state: present }
   - { name: bettertouchtool, state: present }
   - { name: obsidian, state: present }
-  - { name: tomatobar, state: present }
   - { name: notion, state: present }
-  - { name: slack, state: present }
   - { name: skitch, state: present }
-  - { name: dropbox, state: present }
   - { name: vlc, state: present }
   - { name: bitwarden, state: present }
-  - { name: font-ricty-diminished, state: present }
   - { name: appcleaner, state: present }
   - { name: hyperswitch, state: present }
   - { name: figma, state: present }
-  - { name: discord, state: present }

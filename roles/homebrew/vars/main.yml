@@ -1,6 +1,5 @@
 ---
 packages:
-  - { name: nkf, state: present }
   - { name: tig, state: present }
   - { name: tmux, state: present }
   - { name: tree, state: present }
@@ -8,8 +7,5 @@ packages:
   - { name: mas, state: present }
   - { name: fzf, state: present }
   - { name: git, state: present }
-  - { name: fontforge, state: present }
-  - { name: volta, state: present }
   - { name: ghq, state: present }
   - { name: peco, state: present }
-  - { name: nodenv, state: present }
