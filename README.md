@@ -33,8 +33,9 @@ shell ファイルを使って､ 「xcode, homebrew, zsh, ansible」をイン�
 homebrew は､ `~/.homebrew` にインストールされる｡
 
 ```bash
-$ u+x ./scripts/inital.sh
-$ ./scripts/inital.sh
+$ cd mac_setup
+$ chmod u+x ./scripts/initial.sh
+$ ./scripts/initial.sh
 ```
 
 ### zsh の設定 (ansible でうまく自動化ができなかった)
@@ -72,21 +73,22 @@ $ ansible-playbook site.yml -i hosts --ask-become-pass
 
 - Prezto 環境を作るために.zshrc を shell で書き換える
 
-WIP: 最新の方法を調べてから内容を変更する｡ https://github.com/yasuomatsuoka/mac_setup/blob/69c9801cb0c88e06acfab0c5c654c2b0ef73fc9c/roles/macos/tasks/main.yml#L28 で prezto をインストールしている
+https://github.com/yasuomatsuoka/mac_setup/blob/69c9801cb0c88e06acfab0c5c654c2b0ef73fc9c/roles/macos/tasks/main.yml#L28-L43 で prezto をインストールしている。合わせてpreztoインストールの妨げになる `.zshrc` のような設定ファイルを削除している。
 
+下記コマンドで、`.zshrc` に `zprezto` 配下の `.zshrc` 呼び出しが呼び出しされるように設定する
 ```bash
-$ rm ~/.zshrc
-$ setopt EXTENDED_GLOB
+setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 ```
 
-- .zshrc に homebrew のパスなど必要な設定を入れる
+- `~/.zshrc` に homebrew のパスなど必要な設定を入れる
   - 参考: https://github.com/yasuomatsuoka/mac_setup/blob/master/dotfiles/zshrc (.zshrc からリンクはしない)
-- 好みに Prezto をカスタマイズ
+- `~/.zprezto` を編集して好みに Prezto をカスタマイズ
   - autosuggestions の拡張は絶対に入れる
-  - テーマは pure に設定
+  - テーマは sorin から pure に設定
+  - あとはその時の気持ちで好きなように調べて設定する
 
 ## 4. terminal の再起動して zprezto を有効化する
 
@@ -95,6 +97,10 @@ GUI で普通に再起動する
 ## 5. terminal に ayu Coloer Scheme を設定
 
 https://github.com/hwyncho/ayu-Terminal-app から zip をダウンロードして `.termial` の拡張子をダブルクリックで反映される
+
+## 6. dotfiles系をコピー
+
+その時の状況でお好きにカスタマイズ
 
 ## メモ
 

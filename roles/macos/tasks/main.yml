@@ -9,6 +9,12 @@
             type: "{{ item.type }}"
             value: "{{ item.value }}"
           with_items: "{{ settings }}"
+
+        - name: disable the sound effects on boot
+          command: sudo /usr/sbin/nvram SystemAudioVolume=" "
+
+        - name: Show the /Volumes folder
+          command: sudo chflags nohidden /Volumes
       tags:
         - osx_defaults
 

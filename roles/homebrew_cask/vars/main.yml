@@ -7,14 +7,15 @@ taps:
 packages:
   - { name: font-hackgen, state: present }
   - { name: google-japanese-ime, state: present }
+  - { name: arc, state: present }
   - { name: alfred, state: present }
   - { name: visual-studio-code, state: present }
   - { name: bettertouchtool, state: present }
   - { name: obsidian, state: present }
   - { name: notion, state: present }
-  - { name: skitch, state: present }
   - { name: vlc, state: present }
   - { name: bitwarden, state: present }
   - { name: appcleaner, state: present }
-  - { name: hyperswitch, state: present }
+ # - { name: hyperswitch, state: present }
   - { name: figma, state: present }
+  - { name: raindropio, state: present }

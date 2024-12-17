@@ -7,5 +7,5 @@ packages:
   - { id: 539883307, name: LINE }
   - { id: 1611378436, name: Pure Paste }
   - { id: 405399194, name: Kindle }
-  - { id: 1498497896, name: Raivo OTP }
   - { id: 1187652334, name: Fuwari }
+  - { id: 1006087419, name: SnippetsLab}

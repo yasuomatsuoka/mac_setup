@@ -1,5 +1,6 @@
 ---
 settings:
+  # https://macos-defaults.com/
   # key
   - {
       # キーリピートの速度
@@ -51,6 +52,27 @@ settings:
       type: bool,
       value: true,
     }
+  - {
+      # 起動中のアプリケーションをアニメーションで表示させない
+      domain: com.apple.dock,
+      key: launchanim,
+      type: bool,
+      value: false,
+    }
+  - {
+      # 起動中のアプリアイコンにインジケータを表示させない
+      domain: com.apple.dock,
+      key: show-process-indicators,
+      type: bool,
+      value: false,
+    }
+  - {
+      # 最近使ったアプリアイコンを表示させない
+      domain: com.apple.dock,
+      key: show-recents,
+      type: bool,
+      value: false,
+    }
   # finder
   - {
       # パスバーを表示する
@@ -70,6 +92,13 @@ settings:
       # ゴミ箱を空にする前の警告を無効化する
       domain: com.apple.finder,
       key: WarnOnEmptyTrash,
+      type: bool,
+      value: true,
+    }
+  - {
+      # デフォルトで隠しファイルを表示する
+      domain: com.apple.finder,
+      key: AppleShowAllExtensions,
       type: bool,
       value: true,
     }
@@ -127,7 +156,7 @@ settings:
       domain: NSGlobalDomain,
       key: com.apple.springing.delay,
       type: float,
-      value: 0.1,
+      value: 0.5,
     }
   - {
       # ダウンロードしたファイルを初めて開く際に表示される警告ダイアログを無効
@@ -135,6 +164,63 @@ settings:
       key: LSQuarantine,
       type: bool,
       value: false,
+    }
+  - {
+      # 拡張子変更時の警告を無効化
+      domain: com.apple.finder,
+      key: FXEnableExtensionChangeWarning,
+      type: bool,
+      value: false,
+    }
+  - {
+      # 最近使ったタグを無効化
+      domain: com.apple.finder,
+      key: ShowRecentTags,
+      type: bool,
+      value: false,
+    }
+  - {
+      # 外部ディスクのデスクトップ表示を無効化
+      domain: com.apple.finder,
+      key: ShowExternalHardDrivesOnDesktop,
+      type: bool,
+      value: false,
+    }
+  - {
+      # リムーバブルディスクのデスクトップ表示を無効化
+      domain: com.apple.finder,
+      key: ShowRemovableMediaOnDesktop,
+      type: bool,
+      value: false,
+    }
+  - {
+      # マウントされたサーバーのデスクトップ表示を無効化
+      domain: com.apple.finder,
+      key: ShowMountedServersOnDesktop,
+      type: bool,
+      value: false,
+    }
+  - {
+      # 新規finderでの表示
+      domain: com.apple.finder,
+      key: NewWindowTargetPath,
+      type: string,
+      value: !unsafe "file://${HOME}",
+    }
+  - {
+      # ゴミ箱を30日で殻にしない
+      domain: com.apple.finder,
+      key: FXRemoveOldTrashItems,
+      type: bool,
+      value: false,
+    }
+  # menu bar
+  - {
+      # 時間フォーマット
+      domain: com.apple.menuextra.clock,
+      key: DateFormat,
+      type: string,
+      value: '"EEE d MMM HH:mm:ss"',
     }
   # other
   - {
@@ -159,14 +245,14 @@ settings:
       value: false,
     }
   - {
-      # Viscose で長押しで移動1
+      # VSCode で長押しで移動1
       domain: com.microsoft.VSCode,
       key: ApplePressAndHoldEnabled,
       type: bool,
       value: false,
     }
   - {
-      # Viscose で長押しで移動2
+      # VSCode で長押しで移動2
       domain: com.microsoft.VSCodeInsiders,
       key: ApplePressAndHoldEnabled,
       type: bool,
