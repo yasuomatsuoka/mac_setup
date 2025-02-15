@@ -37,6 +37,34 @@ settings:
       type: bool,
       value: false,
     }
+  - {
+      # web入力エリアでスペルの訂正を無効にする
+      domain: NSGlobalDomain,
+      key: WebAutomaticSpellingCorrectionEnabled,
+      type: bool,
+      value: false,
+    }
+  - {
+      # ダブルスペースでピリオド変換する機能を無効化する
+      domain: NSGlobalDomain,
+      key: NSAutomaticPeriodSubstitutionEnabled,
+      type: bool,
+      value: false,
+    }
+  - {
+      # 入力時のダッシュへの自動変換を無効化する
+      domain: NSGlobalDomain,
+      key: NSAutomaticDashSubstitutionEnabled,
+      type: bool,
+      value: false,
+    }
+  - {
+      # 入力時の引用符への自動変換を無効化する
+      domain: NSGlobalDomain,
+      key: NSAutomaticQuoteSubstitutionEnabled,
+      type: bool,
+      value: false,
+    }
   # dock
   - {
       # Dock を自動的に隠す
