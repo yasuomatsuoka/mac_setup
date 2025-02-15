@@ -19,3 +19,4 @@ packages:
  # - { name: hyperswitch, state: present }
   - { name: figma, state: present }
   - { name: raindropio, state: present }
+  - { name: chatgpt, state: present }

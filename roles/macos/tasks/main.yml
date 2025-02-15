@@ -15,6 +15,9 @@
 
         - name: Show the /Volumes folder
           command: sudo chflags nohidden /Volumes
+
+        - name: Disable auto power off when power is connected
+          command: sudo /usr/sbin/nvram BootPreference=%00
       tags:
         - osx_defaults
 
