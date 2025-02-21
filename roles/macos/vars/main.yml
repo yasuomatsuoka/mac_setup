@@ -88,11 +88,11 @@ settings:
       value: false,
     }
   - {
-      # 起動中のアプリアイコンにインジケータを表示させない
+      # 起動中のアプリアイコンにインジケータを表示させる
       domain: com.apple.dock,
       key: show-process-indicators,
       type: bool,
-      value: false,
+      value: true,
     }
   - {
       # 最近使ったアプリアイコンを表示させない
